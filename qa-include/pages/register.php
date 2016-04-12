@@ -38,6 +38,14 @@
 		qa_redirect('');
 
 
+// limit the number of register users to 50 users.	
+	$number_of_reg_users = qa_opt('cache_userpointscount');
+	if ($number_of_reg_users > 25) {
+		$qa_content = qa_content_prepare();
+		$qa_content['error'] = qa_lang_html(' Too Many Users - Let the admin know about it');
+		return $qa_content;
+	}
+ 
 //	Get information about possible additional fields
 
 	$show_terms = qa_opt('show_register_terms');
