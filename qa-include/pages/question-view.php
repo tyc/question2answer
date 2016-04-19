@@ -408,7 +408,7 @@
 				'content' => qa_html(qa_block_words_replace($question['extra'], qa_get_block_words_preg())),
 			);
 
-
+		
 		return $q_view;
 	}
 

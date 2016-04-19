@@ -80,6 +80,9 @@
 
 			$countanswers=$question['acount']+1;
 
+
+			
+			
 			if ($countanswers==1)
 				echo qa_lang_html('question/1_answer_title')."\n";
 			else
