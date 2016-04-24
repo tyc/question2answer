@@ -2166,6 +2166,17 @@ class qa_html_theme_base
 			$this->a_list_items($a_list['as']);
 			$this->output('</div> <!-- END qa-a-list -->', '');
 		}
+// TYC : possible area where no answers are popped up.
+// 		else 
+// 		{
+// 			$this->output( '<div class="alert" style="background-color: #FFFDB8;border: 1px solid #D4D2A9;">Provide some of your own ideas to view, to vote and to comment on the ideas of others</div>' );
+			
+// 			$string = '<script language="JavaScript">NoAnswersYet = true</script>';
+// 			$this->output( $string );
+			
+// 			$string = '<script language="JavaScript" src="http://188.166.161.63/q2a2/utils/countdown.js"></script>';
+// 			$this->output( $string );
+// 		}
 	}
 
 	public function a_list_items($a_items)

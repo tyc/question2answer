@@ -81,5 +81,18 @@ if(CountStepper>0)
   ddiff = new Date(dnow-dthen);
 else
   ddiff = new Date(dthen-dnow);
+
 gsecs = Math.floor(ddiff.valueOf()/1000);
+
+
+if (NoAnswersYet == false)
+	DisplayFormat = "%%S%% Seconds false.";
+
+if (NoAnswersYet == true)
+	DisplayFormat = "%%M%% Minutes true, ";
+
+if (typeof(NoAnswersYet)=="undefined")
+	DisplayFormat = "%%S%%  %%M%% Days Undefined! ";
+ 
+	
 CountBack(gsecs);
