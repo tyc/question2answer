@@ -28,8 +28,10 @@ function calcage(secs, num1, num2) {
 
 function CountBack(secs) {
   
+/* when the timer has exhausted, the website switches to a hardcoded URL.
+ */
   if (secs < 0) {
-		  location.href="http://www.google.com/";
+		  location.href="http://188.166.161.63/q2a2/index.php";
   }	
 
   if (secs < 0) {
@@ -84,15 +86,22 @@ else
 
 gsecs = Math.floor(ddiff.valueOf()/1000);
 
-
+/* this is debug code to check if we can detect any questions with
+ * no answers. 
 if (NoAnswersYet == false)
-	DisplayFormat = "%%S%% Seconds false.";
+	DisplayFormat = "%%M%% : %%S%% minutes false.";
+*/
 
+/* only display and set the clock timer if this person has not provided
+ * an answer yet.
+ */
 if (NoAnswersYet == true)
-	DisplayFormat = "%%M%% Minutes true, ";
+{
+	DisplayFormat = "%%M%% : %%S%% minutes left";
+	CountBack(gsecs);
+}
 
 if (typeof(NoAnswersYet)=="undefined")
 	DisplayFormat = "%%S%%  %%M%% Days Undefined! ";
- 
+
 	
-CountBack(gsecs);
