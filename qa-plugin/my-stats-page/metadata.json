@@ -1,0 +1,10 @@
+{
+	"name": "My Statistics",
+	"description": "Show my statistics.",
+	"version": "1.0",
+	"date": "2016-05-16",
+	"author": "Tehn Yit Chin",
+	"author_uri": "http://www.tyc.org",
+	"license": "GPLv2",
+	"min_q2a": "1.5"
+}
